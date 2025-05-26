@@ -1,3 +1,8 @@
+Members 
+ i) Hillary Wafula hillarywafula837@gmail.com
+ ii) Sofia Kea keasofia236@gmail.com
+ iii) Silvia njeri silvianjeri3580@gmail.com
+
 # 🌾 FarmConnect
 
 A modern web application connecting farmers, buyers, and agricultural services in Kenya.
