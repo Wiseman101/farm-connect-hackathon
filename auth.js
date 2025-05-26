@@ -157,3 +157,13 @@ function showNotification(message, type = "info") {
     notification.remove();
   }, 3000);
 }
+
+// After successful login:
+setTimeout(() => {
+  window.location.href = "index.html#dashboard";
+}, 1000);
+
+// After successful signup:
+setTimeout(() => {
+  window.location.href = "index.html";
+}, 2000);
