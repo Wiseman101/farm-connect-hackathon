@@ -3,9 +3,48 @@ let loginForm;
 let signupForm;
 
 document.addEventListener("DOMContentLoaded", () => {
-  // DOM elements
   loginForm = document.getElementById("login-form");
   signupForm = document.getElementById("signup-form");
+
+  // LOGIN: Enable button only when both fields are filled
+  const loginEmail = document.getElementById("login-email");
+  const loginPassword = document.getElementById("login-password");
+  const loginBtn = document.getElementById("login-btn");
+
+  if (loginEmail && loginPassword && loginBtn) {
+    function checkLoginInputs() {
+      loginBtn.disabled = !(loginEmail.value.trim() && loginPassword.value.trim());
+    }
+    loginEmail.addEventListener("input", checkLoginInputs);
+    loginPassword.addEventListener("input", checkLoginInputs);
+    checkLoginInputs();
+  }
+
+  // SIGNUP: Enable button only when all fields are filled
+  const signupName = document.getElementById("signup-name");
+  const signupEmail = document.getElementById("signup-email");
+  const signupPhone = document.getElementById("signup-phone");
+  const signupPassword = document.getElementById("signup-password");
+  const signupConfirm = document.getElementById("confirm-password");
+  const signupBtn = document.getElementById("signup-btn");
+
+  if (signupName && signupEmail && signupPhone && signupPassword && signupConfirm && signupBtn) {
+    function checkSignupInputs() {
+      signupBtn.disabled = !(
+        signupName.value.trim() &&
+        signupEmail.value.trim() &&
+        signupPhone.value.trim() &&
+        signupPassword.value.trim() &&
+        signupConfirm.value.trim()
+      );
+    }
+    signupName.addEventListener("input", checkSignupInputs);
+    signupEmail.addEventListener("input", checkSignupInputs);
+    signupPhone.addEventListener("input", checkSignupInputs);
+    signupPassword.addEventListener("input", checkSignupInputs);
+    signupConfirm.addEventListener("input", checkSignupInputs);
+    checkSignupInputs();
+  }
 
   // Handle login
   if (loginForm) {
@@ -23,7 +62,7 @@ async function handleLogin(e) {
 
   const email = document.getElementById("login-email").value.trim();
   const password = document.getElementById("login-password").value.trim();
-  const rememberMe = document.getElementById("remember-me")?.checked;
+  // Optional: const rememberMe = document.getElementById("remember-me")?.checked;
 
   // Validation
   if (!email || !password) {
@@ -157,13 +196,3 @@ function showNotification(message, type = "info") {
     notification.remove();
   }, 3000);
 }
-
-// After successful login:
-setTimeout(() => {
-  window.location.href = "index.html#dashboard";
-}, 1000);
-
-// After successful signup:
-setTimeout(() => {
-  window.location.href = "index.html";
-}, 2000);
