@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmConnect - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card" id="login-card">
+      <h1><i class="fas fa-leaf"></i> FarmConnect</h1>
+      <p class="subtitle">Login to your farmer dashboard</p>
+      
+      <form id="login-form">
+        <div class="input-group">
+          <label for="login-email"><i class="fas fa-envelope"></i> Email</label>
+          <input type="email" id="login-email" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="login-password"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="login-password" required>
+        </div>
+        
+        <button type="submit" class="auth-btn">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+      
+      <p class="switch-text">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+    </div>
+
+    <div class="auth-card hidden" id="signup-card">
+      <h1><i class="fas fa-leaf"></i> FarmConnect</h1>
+      <p class="subtitle">Create your farmer account</p>
+      
+      <form id="signup-form">
+        <div class="input-group">
+          <label for="signup-name"><i class="fas fa-user"></i> Full Name</label>
+          <input type="text" id="signup-name" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="signup-email"><i class="fas fa-envelope"></i> Email</label>
+          <input type="email" id="signup-email" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="signup-phone"><i class="fas fa-phone"></i> Phone Number</label>
+          <input type="tel" id="signup-phone" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="signup-password"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="signup-password" minlength="6" required>
+        </div>
+        
+        <button type="submit" class="auth-btn">
+          <i class="fas fa-user-plus"></i> Sign Up
+        </button>
+      </form>
+      
+      <p class="switch-text">Already have an account? <a href="#" id="show-login">Login</a></p>
+    </div>
+  </div>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Same head content as before -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Same dashboard content as before -->
+  
+  <script src="script.js"></script>
+  <script>
+    // Check authentication before loading dashboard
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+      
+      if (!currentUser) {
+        window.location.href = "index.html";
+      } else {
+        // Load dashboard content
+        document.getElementById("profile-name").textContent = currentUser.name;
+        document.getElementById("profile-phone").textContent = currentUser.phone;
+        document.getElementById("profile-joined").textContent = `Member since ${currentUser.joined}`;
+        
+        // Initialize the rest of the dashboard
+        initDashboard();
+      }
+    });
+
+    // Add logout functionality
+    document.getElementById("logoutBtn").addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+
+
+  <script src="auth.js"></script>
+</body>
+</html>

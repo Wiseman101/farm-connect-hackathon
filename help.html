@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmConnect - Help Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-seedling"></i>
+            <span>FarmConnect</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="market.html"><i class="fas fa-store"></i> Market</a>
+            <a href="help.html" class="active"><i class="fas fa-question-circle"></i> Help</a>
+            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="help-header">
+            <h1>Help Center</h1>
+            <div class="search-bar">
+                <input type="text" id="help-search" placeholder="Search for help topics...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <div class="help-grid">
+            <!-- Getting Started -->
+            <div class="help-section">
+                <h2><i class="fas fa-rocket"></i> Getting Started</h2>
+                <div class="help-content">
+                    <div class="help-item">
+                        <h3>Creating an Account</h3>
+                        <p>Learn how to create and set up your FarmConnect account:</p>
+                        <ol>
+                            <li>Click "Sign Up" on the login page</li>
+                            <li>Fill in your personal information</li>
+                            <li>Create a secure password</li>
+                            <li>Verify your email address</li>
+                            <li>Complete your farm profile</li>
+                        </ol>
+                    </div>
+                    <div class="help-item">
+                        <h3>Setting Up Your Farm Profile</h3>
+                        <p>Customize your farm profile to showcase your produce:</p>
+                        <ul>
+                            <li>Add your farm's location</li>
+                            <li>Specify your produce types</li>
+                            <li>Upload farm photos</li>
+                            <li>Set your delivery preferences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Features -->
+            <div class="help-section">
+                <h2><i class="fas fa-store"></i> Market Features</h2>
+                <div class="help-content">
+                    <div class="help-item">
+                        <h3>Browsing Products</h3>
+                        <p>Navigate the market effectively:</p>
+                        <ul>
+                            <li>Use category filters to find specific products</li>
+                            <li>Search by product name, seller, or description</li>
+                            <li>Sort products by price, popularity, or date</li>
+                            <li>View detailed product information</li>
+                        </ul>
+                    </div>
+                    <div class="help-item">
+                        <h3>Shopping Cart</h3>
+                        <p>Manage your shopping experience:</p>
+                        <ul>
+                            <li>Add products to your cart</li>
+                            <li>Review your cart contents</li>
+                            <li>Update quantities</li>
+                            <li>Proceed to checkout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Farm Management -->
+            <div class="help-section">
+                <h2><i class="fas fa-tractor"></i> Farm Management</h2>
+                <div class="help-content">
+                    <div class="help-item">
+                        <h3>Updating Farm Information</h3>
+                        <p>Keep your farm profile current:</p>
+                        <ul>
+                            <li>Update produce availability</li>
+                            <li>Modify pricing information</li>
+                            <li>Add new product listings</li>
+                            <li>Manage seasonal offerings</li>
+                        </ul>
+                    </div>
+                    <div class="help-item">
+                        <h3>Activity Tracking</h3>
+                        <p>Monitor your farm's activities:</p>
+                        <ul>
+                            <li>View order history</li>
+                            <li>Track sales performance</li>
+                            <li>Monitor customer feedback</li>
+                            <li>Review farm updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather & Alerts -->
+            <div class="help-section">
+                <h2><i class="fas fa-cloud-sun"></i> Weather & Alerts</h2>
+                <div class="help-content">
+                    <div class="help-item">
+                        <h3>Weather Updates</h3>
+                        <p>Stay informed about weather conditions:</p>
+                        <ul>
+                            <li>View current weather conditions</li>
+                            <li>Check weather forecasts</li>
+                            <li>Receive weather alerts</li>
+                            <li>Get farming recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="help-item">
+                        <h3>Alert Settings</h3>
+                        <p>Customize your notification preferences:</p>
+                        <ul>
+                            <li>Enable/disable weather alerts</li>
+                            <li>Set alert thresholds</li>
+                            <li>Choose notification methods</li>
+                            <li>Manage alert frequency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account & Security -->
+            <div class="help-section">
+                <h2><i class="fas fa-shield-alt"></i> Account & Security</h2>
+                <div class="help-content">
+                    <div class="help-item">
+                        <h3>Account Settings</h3>
+                        <p>Manage your account preferences:</p>
+                        <ul>
+                            <li>Update personal information</li>
+                            <li>Change password</li>
+                            <li>Modify notification settings</li>
+                            <li>Manage privacy options</li>
+                        </ul>
+                    </div>
+                    <div class="help-item">
+                        <h3>Security Features</h3>
+                        <p>Keep your account secure:</p>
+                        <ul>
+                            <li>Enable two-factor authentication</li>
+                            <li>Review login history</li>
+                            <li>Manage connected devices</li>
+                            <li>Set up security alerts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support & Contact -->
+            <div class="help-section">
+                <h2><i class="fas fa-headset"></i> Support & Contact</h2>
+                <div class="help-content">
+                    <div class="help-item">
+                        <h3>Contact Support</h3>
+                        <p>Get help when you need it:</p>
+                        <ul>
+                            <li>Email: support@farmconnect.com</li>
+                            <li>Phone: 1-800-FARM-HELP</li>
+                            <li>Live Chat: Available 24/7</li>
+                            <li>Response Time: Within 24 hours</li>
+                        </ul>
+                    </div>
+                    <div class="help-item">
+                        <h3>FAQ</h3>
+                        <p>Find answers to common questions:</p>
+                        <ul>
+                            <li>Account Management</li>
+                            <li>Market Operations</li>
+                            <li>Technical Issues</li>
+                            <li>Billing & Payments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="help.js"></script>
+</body>
+</html> 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌾 FarmConnect - Farmer's Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="auth.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+</head>
+<body>
+  <div class="auth-container">
+    <!-- Login Card -->
+    <div class="auth-card active" id="login-card">
+      <h1><i class="fas fa-tractor"></i> FarmConnect</h1>
+      <p class="subtitle">👨‍🌾 Access your farming dashboard</p>
+      
+      <form id="login-form">
+        <div class="input-group">
+          <label for="login-email"><i class="fas fa-envelope"></i> Email</label>
+          <input type="email" id="login-email" placeholder="farmer@example.com" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="login-password"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="login-password" placeholder="••••••••" required>
+        </div>
+        
+        <button type="submit" class="auth-btn">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+      </form>
+      
+      <p class="switch-text">New to FarmConnect? <a href="#" id="show-signup">Sign up here <i class="fas fa-arrow-right"></i></a></p>
+    </div>
+
+    <!-- Signup Card -->
+    <div class="auth-card" id="signup-card">
+      <h1><i class="fas fa-seedling"></i> FarmConnect</h1>
+      <p class="subtitle">🚜 Join our farming community</p>
+      
+      <form id="signup-form">
+        <div class="input-group">
+          <label for="signup-name"><i class="fas fa-user"></i> Full Name</label>
+          <input type="text" id="signup-name" placeholder="John Doe" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="signup-email"><i class="fas fa-envelope"></i> Email</label>
+          <input type="email" id="signup-email" placeholder="farmer@example.com" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="signup-phone"><i class="fas fa-phone"></i> Phone Number</label>
+          <input type="tel" id="signup-phone" placeholder="+254 700 000000" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="signup-password"><i class="fas fa-lock"></i> Password (min 6 chars)</label>
+          <input type="password" id="signup-password" placeholder="••••••••" minlength="6" required>
+        </div>
+        
+        <button type="submit" class="auth-btn">
+          <i class="fas fa-user-plus"></i> Create Account
+        </button>
+      </form>
+      
+      <p class="switch-text">Already have an account? <a href="#" id="show-login">Login here <i class="fas fa-arrow-right"></i></a></p>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmConnect - Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-seedling"></i>
+            <span>FarmConnect</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="market.html" class="active"><i class="fas fa-store"></i> Market</a>
+            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="market-header">
+            <h1>FarmConnect Market</h1>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for produce...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="vegetables">Vegetables</button>
+            <button class="filter-btn" data-category="fruits">Fruits</button>
+            <button class="filter-btn" data-category="grains">Grains</button>
+            <button class="filter-btn" data-category="dairy">Dairy</button>
+            <button class="filter-btn" data-category="herbs">Herbs</button>
+            <button class="filter-btn" data-category="field-crops">Field Crops</button>
+            <button class="filter-btn" data-category="livestock">Livestock</button>
+        </div>
+
+        <div class="market-grid" id="market-items">
+            <!-- Vegetables -->
+            <div class="market-item" data-category="vegetables">
+                <img src="https://images.unsplash.com/photo-1546094097-246e1cacc0e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fresh Tomatoes">
+                <div class="item-details">
+                    <h3>Fresh Tomatoes</h3>
+                    <p class="price">KSH 150/kg</p>
+                    <p class="description">Fresh, locally grown tomatoes. Perfect for salads and cooking.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe&background=2e7d32&color=fff" alt="Seller">
+                        <span>Green Valley Farms</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="vegetables">
+                <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Organic Carrots">
+                <div class="item-details">
+                    <h3>Organic Carrots</h3>
+                    <p class="price">KSH 200/kg</p>
+                    <p class="description">Organic carrots, rich in vitamins and minerals.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Jane+Smith&background=2e7d32&color=fff" alt="Seller">
+                        <span>Organic Harvest</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="vegetables">
+                <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fresh Spinach">
+                <div class="item-details">
+                    <h3>Fresh Spinach</h3>
+                    <p class="price">KSH 120/bunch</p>
+                    <p class="description">Fresh, organic spinach. Perfect for salads and cooking.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Mike+Johnson&background=2e7d32&color=fff" alt="Seller">
+                        <span>Green Leaf Farms</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="vegetables">
+                <img src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bell Peppers">
+                <div class="item-details">
+                    <h3>Bell Peppers</h3>
+                    <p class="price">KSH 180/kg</p>
+                    <p class="description">Colorful bell peppers, perfect for cooking and salads.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Wilson&background=2e7d32&color=fff" alt="Seller">
+                        <span>Rainbow Farms</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Fruits -->
+            <div class="market-item" data-category="fruits">
+                <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fresh Apples">
+                <div class="item-details">
+                    <h3>Fresh Apples</h3>
+                    <p class="price">KSH 250/kg</p>
+                    <p class="description">Sweet and crispy apples, perfect for snacking.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Tom+Brown&background=2e7d32&color=fff" alt="Seller">
+                        <span>Apple Valley</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="fruits">
+                <img src="https://images.unsplash.com/photo-1518635017498-87f514b751ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Organic Strawberries">
+                <div class="item-details">
+                    <h3>Organic Strawberries</h3>
+                    <p class="price">KSH 350/kg</p>
+                    <p class="description">Sweet and juicy organic strawberries.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Lisa+Chen&background=2e7d32&color=fff" alt="Seller">
+                        <span>Berry Fields</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="fruits">
+                <img src="https://images.unsplash.com/photo-1547514701-42782101795e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fresh Oranges">
+                <div class="item-details">
+                    <h3>Fresh Oranges</h3>
+                    <p class="price">KSH 180/kg</p>
+                    <p class="description">Juicy oranges, rich in vitamin C.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=David+Lee&background=2e7d32&color=fff" alt="Seller">
+                        <span>Citrus Grove</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="fruits">
+                <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fresh Bananas">
+                <div class="item-details">
+                    <h3>Fresh Bananas</h3>
+                    <p class="price">KSH 120/kg</p>
+                    <p class="description">Sweet and nutritious bananas.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Emma+Taylor&background=2e7d32&color=fff" alt="Seller">
+                        <span>Tropical Fruits</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Grains -->
+            <div class="market-item" data-category="grains">
+                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Organic Wheat">
+                <div class="item-details">
+                    <h3>Organic Wheat</h3>
+                    <p class="price">KSH 280/kg</p>
+                    <p class="description">High-quality organic wheat for baking.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Robert+Clark&background=2e7d32&color=fff" alt="Seller">
+                        <span>Golden Fields</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="grains">
+                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Brown Rice">
+                <div class="item-details">
+                    <h3>Brown Rice</h3>
+                    <p class="price">KSH 220/kg</p>
+                    <p class="description">Nutritious brown rice, perfect for healthy meals.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Maria+Garcia&background=2e7d32&color=fff" alt="Seller">
+                        <span>Rice Fields</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="grains">
+                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Quinoa">
+                <div class="item-details">
+                    <h3>Quinoa</h3>
+                    <p class="price">KSH 450/kg</p>
+                    <p class="description">Premium quinoa, rich in protein and nutrients.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=James+Wilson&background=2e7d32&color=fff" alt="Seller">
+                        <span>Healthy Grains</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Dairy -->
+            <div class="market-item" data-category="dairy">
+                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fresh Milk">
+                <div class="item-details">
+                    <h3>Fresh Milk</h3>
+                    <p class="price">KSH 120/liter</p>
+                    <p class="description">Fresh, pasteurized milk from grass-fed cows.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Peter+Dairy&background=2e7d32&color=fff" alt="Seller">
+                        <span>Dairy Delights</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="dairy">
+                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Farm Cheese">
+                <div class="item-details">
+                    <h3>Farm Cheese</h3>
+                    <p class="price">KSH 400/kg</p>
+                    <p class="description">Artisanal cheese made from fresh milk.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Anna+Cheese&background=2e7d32&color=fff" alt="Seller">
+                        <span>Cheese Masters</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="dairy">
+                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Greek Yogurt">
+                <div class="item-details">
+                    <h3>Greek Yogurt</h3>
+                    <p class="price">KSH 250/kg</p>
+                    <p class="description">Creamy Greek yogurt, high in protein.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Yogurt+Pro&background=2e7d32&color=fff" alt="Seller">
+                        <span>Yogurt Delights</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Herbs -->
+            <div class="market-item" data-category="herbs">
+                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fresh Basil">
+                <div class="item-details">
+                    <h3>Fresh Basil</h3>
+                    <p class="price">KSH 100/bunch</p>
+                    <p class="description">Aromatic fresh basil, perfect for cooking.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Herb+Master&background=2e7d32&color=fff" alt="Seller">
+                        <span>Herb Garden</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="herbs">
+                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Fresh Mint">
+                <div class="item-details">
+                    <h3>Fresh Mint</h3>
+                    <p class="price">KSH 80/bunch</p>
+                    <p class="description">Refreshing mint leaves for tea and cooking.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Mint+Pro&background=2e7d32&color=fff" alt="Seller">
+                        <span>Mint Garden</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Field Crops -->
+            <div class="market-item" data-category="field-crops">
+                <img src="assets/images/field-crops/beans.jpg" alt="Beans">
+                <div class="item-details">
+                    <h3>Beans</h3>
+                    <p class="price">KSH 200/kg</p>
+                    <p class="description">Fresh beans, rich in protein. Available in various varieties.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Bean+Farmer&background=2e7d32&color=fff" alt="Seller">
+                        <span>Bean Harvest Co.</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="field-crops">
+                <img src="assets/images/field-crops/banana-plantation.jpg" alt="Banana Plantation">
+                <div class="item-details">
+                    <h3>Banana Plantation</h3>
+                    <p class="price">KSH 150,000/acre</p>
+                    <p class="description">Mature banana plantation for sale. Ready for harvest.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Banana+Owner&background=2e7d32&color=fff" alt="Seller">
+                        <span>Tropical Plantations</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Livestock -->
+            <div class="market-item" data-category="livestock">
+                <img src="assets/images/livestock/beef-cattle.jpg" alt="Beef Cattle">
+                <div class="item-details">
+                    <h3>Beef Cattle</h3>
+                    <p class="price">KSH 150,000/cow</p>
+                    <p class="description">Premium beef cattle, grass-fed and healthy.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Beef+Master&background=2e7d32&color=fff" alt="Seller">
+                        <span>Beef Masters</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="livestock">
+                <img src="assets/images/livestock/grazing-land.jpg" alt="Grazing Land">
+                <div class="item-details">
+                    <h3>Grazing Land</h3>
+                    <p class="price">KSH 2,000,000/acre</p>
+                    <p class="description">Prime grazing land with water source and fencing.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Land+Owner&background=2e7d32&color=fff" alt="Seller">
+                        <span>Green Pastures</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="market-item" data-category="livestock">
+                <img src="assets/images/livestock/young-calves.jpg" alt="Young Calves">
+                <div class="item-details">
+                    <h3>Young Calves</h3>
+                    <p class="price">KSH 45,000/calf</p>
+                    <p class="description">Healthy young calves, 3-6 months old.</p>
+                    <div class="seller-info">
+                        <img src="https://ui-avatars.com/api/?name=Calf+Farmer&background=2e7d32&color=fff" alt="Seller">
+                        <span>Young Stock Farm</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="market.js"></script>
+</body>
+</html> 
